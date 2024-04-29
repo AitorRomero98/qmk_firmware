@@ -15,4 +15,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-void render_logo(void);
+#pragma once
+
+#include "quantum.h"
+
+#if defined(KEYBOARD_doio_kb16_rev1)
+    #include "rev1.h"
+#elif defined(KEYBOARD_doio_kb16_rev2)
+    #include "rev2.h"
+#endif
