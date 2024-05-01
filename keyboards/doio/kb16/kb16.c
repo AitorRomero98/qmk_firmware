@@ -26,7 +26,7 @@
 #endif
 
 #ifdef OLED_ENABLE
-    uint16_t startup_timer; 
+    uint16_t startup_timer;
 
     oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
         startup_timer = timer_read();
@@ -49,6 +49,8 @@
     }
 #endif
 
+/* g_led_config ALREADY DEFINED IN EACH REVISION */
+
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {
     {  0,      1,      2,      3 },
@@ -67,3 +69,5 @@ led_config_t g_led_config = { {
     1, 1, 1, 1,
 } };
 #endif
+
+

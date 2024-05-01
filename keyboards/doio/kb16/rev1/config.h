@@ -19,6 +19,9 @@
 
 #include "config_common.h"
 
+/* set layer size */
+#define LAYER_STATE_16BIT
+
 /* key matrix size */
 #define MATRIX_ROWS 4
 #define MATRIX_COLS 5

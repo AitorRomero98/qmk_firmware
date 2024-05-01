@@ -67,7 +67,7 @@
 	#define RGB_DISABLE_WHEN_USB_SUSPENDED
 	#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 	#define RGB_MATRIX_KEYPRESSES
-	#define RGB_MATRIX_TIMEOUT 60000 // number of milliseconds to wait until rgb automatically turns off	
+	//#define RGB_MATRIX_TIMEOUT 60000 // number of milliseconds to wait until rgb automatically turns off
 
 /* RGB Matrix effect */
 // RGB Matrix Animation modes. Explicitly enabled

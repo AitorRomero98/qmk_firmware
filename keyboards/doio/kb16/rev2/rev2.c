@@ -17,6 +17,8 @@
 
 #include "rev2.h"
 
+/* g_led_config already defined in parent directory
+
 #ifdef RGB_MATRIX_ENABLE
 led_config_t g_led_config = { {
     {  0,      1,      2,      3, NO_LED },
@@ -35,3 +37,5 @@ led_config_t g_led_config = { {
     1, 1, 1, 1,
 } };
 #endif
+
+*/

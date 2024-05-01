@@ -26,10 +26,18 @@
 // entirely and just use numbers.
 
 enum layer_names {
-    _BASE,
-    _FN,
+    _FN0,
     _FN1,
-    _FN2
+    _FN2,
+    _FN3,
+    _FN4,
+    _FN5,
+    _FN6,
+    _FN7,
+    _FN8,
+    _FN9,
+    _FN10,
+    _FN11,
 };
 
 // enum layer_keycodes { };
@@ -57,33 +65,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        └───┴───┴───┴───┘
 */
     /*  Row:    0         1        2        3         4      */
-    [_BASE] = LAYOUT(
+    [_FN0] = LAYOUT(
                 KC_1,     KC_2,    KC_3,    KC_4,     KC_MPLY,
-                KC_5,     KC_6,    KC_7,    KC_8,     TO(_FN),
+                KC_5,     KC_6,    KC_7,    KC_8,     TO(_FN3),
                 KC_9,     KC_0,    KC_UP,   KC_ENT,   KC_MUTE,
                 MO(_FN2), KC_LEFT, KC_DOWN, KC_RIGHT
             ),
 
-/*
-       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
-       │   │   │   │   │   │   │ │   │
-       ├───┼───┼───┼───┤   └───┘ └───┘
-       │   │   │   │   │
-       ├───┼───┼───┼───┤
-       │   │   │   │   │      ┌───┐
-       ├───┼───┼───┼───┤      │   │
-       │   │   │   │   │      └───┘
-       └───┴───┴───┴───┘
-*/
-    /*  Row:    0        1        2        3        4       */
-    [_FN] = LAYOUT(
-                _______, _______, _______, _______, _______,
-                _______, _______, _______, _______, TO(_FN1),
-                _______, _______, _______, _______, _______,
-                _______, _______, _______, _______
-            ),
-
-/*
+    /*
        ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
        │   │   │   │   │   │   │ │   │
        ├───┼───┼───┼───┤   └───┘ └───┘
@@ -102,6 +91,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 _______, _______, _______, _______
             ),
 
+
+/*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │   │   │   │   │   │   │ │   │
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │   │   │   │   │
+       ├───┼───┼───┼───┤
+       │   │   │   │   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │   │   │   │      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4       */
+    [_FN2] = LAYOUT(
+                _______, _______, _______, _______, _______,
+                _______, _______, _______, _______, TO(_FN2),
+                _______, _______, _______, _______, _______,
+                _______, _______, _______, _______
+            ),
+
 /*
        ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
        │Spi│Spd│   │   │   │   │ │TO0│
@@ -114,9 +123,154 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        └───┴───┴───┴───┘
 */
     /*  Row:    0        1        2        3        4        */
-    [_FN2] = LAYOUT(
+    [_FN3] = LAYOUT(
                 RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
-                RGB_SAI, RGB_SAD, _______, _______, TO(_BASE),
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+
+    /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN4] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+            /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN5] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+            /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN6] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+            /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN7] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+            /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN8] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+            /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN9] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+            /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN10] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
+                RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
+                _______, RGB_VAI, RGB_HUD, RGB_VAD
+            ),
+            /*
+       ┌───┬───┬───┬───┐   ┌───┐ ┌───┐
+       │Spi│Spd│   │   │   │   │ │TO0│
+       ├───┼───┼───┼───┤   └───┘ └───┘
+       │Sai│Sad│   │   │
+       ├───┼───┼───┼───┤
+       │Tog│Mod│Hui│   │      ┌───┐
+       ├───┼───┼───┼───┤      │   │
+       │   │Vai│Hud│Vad│      └───┘
+       └───┴───┴───┴───┘
+*/
+    /*  Row:    0        1        2        3        4        */
+    [_FN11] = LAYOUT(
+                RGB_SPI, RGB_SPD, _______, QK_BOOT, _______,
+                RGB_SAI, RGB_SAD, _______, _______, TO(_FN0),
                 RGB_TOG, RGB_MOD, RGB_HUI, _______, _______,
                 _______, RGB_VAI, RGB_HUD, RGB_VAD
             ),
@@ -132,9 +286,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #ifdef ENCODER_MAP_ENABLE
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [_BASE] = { ENCODER_CCW_CW(KC_MPRV, KC_MNXT), ENCODER_CCW_CW(KC_PGDN, KC_PGUP), ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-    [_FN]   = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN0]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
     [_FN1]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
     [_FN2]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN3]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN4]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN5]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN6]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN7]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN8]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN9]  = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN10] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
+    [_FN11] = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS), ENCODER_CCW_CW(KC_TRNS, KC_TRNS) },
 };
 #endif

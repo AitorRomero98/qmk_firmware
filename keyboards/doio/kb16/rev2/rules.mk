@@ -27,3 +27,6 @@ ENCODER_ENABLE = yes
 # Wear-levelling driver
 EEPROM_DRIVER = wear_leveling
 WEAR_LEVELING_DRIVER = embedded_flash
+
+# Tap_dance enabled
+TAP_DANCE = yes

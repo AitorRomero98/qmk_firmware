@@ -18,7 +18,7 @@
 
 /* Additional thing to reduce compiled size */
 #define NO_ACTION_ONESHOT
-#define LAYER_STATE_8BIT
+#define LAYER_STATE_16BIT
 
 #ifdef RGB_MATRIX_ENABLE
     /* RGB Matrix config */
