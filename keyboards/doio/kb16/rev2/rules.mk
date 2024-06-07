@@ -30,3 +30,6 @@ WEAR_LEVELING_DRIVER = embedded_flash
 
 # Tap_dance enabled
 TAP_DANCE = yes
+
+# Step Sequencer (MIDI) enabled
+SEQUENCER_ENABLE = yes

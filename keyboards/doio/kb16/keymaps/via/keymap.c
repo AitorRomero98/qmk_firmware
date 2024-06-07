@@ -18,7 +18,7 @@
 #include QMK_KEYBOARD_H
 
 // OLED animation
-#include "lib/layer_status/layer_status.h"
+#include "keyboards\doio\kb16\lib\layer_status\layer_status.h"
 
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.

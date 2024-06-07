@@ -621,6 +621,7 @@ void quantum_task(void) {
 #endif
 
 #ifdef SEQUENCER_ENABLE
+    void sequencer_task(void);
     sequencer_task();
 #endif
 

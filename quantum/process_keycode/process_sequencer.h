@@ -20,4 +20,17 @@
 #include <stdbool.h>
 #include "action.h"
 
+#ifndef SEQUENCER_STEP_MIN
+#define SEQUENCER_STEP_MIN
+#endif
+
 bool process_sequencer(uint16_t keycode, keyrecord_t *record);
+void sequencer_on(void);
+void sequencer_off(void);
+void sequencer_toggle(void);
+void sequencer_decrease_tempo(void);
+void sequencer_increase_tempo(void);
+void sequencer_decrease_resolution(void);
+void sequencer_increase_resolution(void);
+void sequencer_set_all_steps_on(void);
+void sequencer_set_all_steps_off(void);
